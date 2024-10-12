@@ -4,9 +4,30 @@
              x:Class="PAMCalculator.Views.CalculatorView"
              Title="CalculatorView">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Primeiro Termo:" VerticalOptions="Center"/>
+            <Entry Text="{Binding PrimeiroTermo}" Placeholder="1° Termo" Keyboard="Numeric"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Segundo Termo:" VerticalOptions="Center"/>
+            <Entry Text="{Binding SegundoTermo}" Placeholder="2° Termo" Keyboard="Numeric"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Resultado:" VerticalOptions="Center"/>
+            <Entry Text="{Binding Resultado}" Placeholder="Resultado" Keyboard="Numeric" />
+        </HorizontalStackLayout>
+        <Button
+            Text="Somar" Command="{Binding SomarCommand}"/>
+        <Button
+            Text="Subtrair" Command="{Binding SubtrairCommand}"/>
+        <Button
+            Text="Multiplicar" Command="{Binding MultiplicarCommand}"/>
+        <Button
+            Text="Dividir" Command="{Binding DividirCommand}"/>
+        <Button
+            Text="Elevar" Command="{Binding ElevarCommand}"/>
+        <Button
+            Text="Raiz" Command="{Binding RaizCommand}"/>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,28 +13,57 @@ namespace PAMCalculator.Models
         public double SegundoTermo{ get; set; }
         public double Resultado{ get; set; }
 
-        public void Somar()
+        public double Somar(double n1, double n2)
         {
-            Resultado = PrimeiroTermo + SegundoTermo;
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado =  n1 + n2;
+            return Resultado;
         }
-        public void Subtrair()
+        public double Subtrair(double n1, double n2)
         {
-            Resultado = PrimeiroTermo - SegundoTermo;
+           PrimeiroTermo = n1;
+           SegundoTermo = n2;
+           Resultado = n1 - n2;
+           return Resultado; 
         }
-        public void Multiplicar()
+        public double Multiplicar(double n1, double n2)
         {
-            Resultado = PrimeiroTermo * SegundoTermo;
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1 * n2;
+            return Resultado;
         }
-        public void Dividir()
+        public double Dividir(double n1, double n2)
         {
-            Resultado = PrimeiroTermo / SegundoTermo;
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1 / n2;
+            return Resultado;
         }
-        public void Elevar()
+        public double Elevar(double n1, double n2)
         {
-           
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1;
+            for (int i = 1; i < n2; i++)
+            {
+                Resultado = n1 * Resultado;
+            }
+            return Resultado;
         }
-        public void Raiz()
+        public double Raiz(double n1, double n2)
         {
+            //calcular a raiz quadrada de um número n é descobrir qual número elevado ao quadrado resulta em n, Inverso do Elevar
+
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1;
+            for (int i = 1; i < n2; i++)
+            {
+                
+            }
+            return Resultado;
         }
     }
 }
