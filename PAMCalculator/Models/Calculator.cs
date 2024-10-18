@@ -54,14 +54,11 @@ namespace PAMCalculator.Models
         }
         public double Raiz(double n1, double n2)
         {
-            //calcular a raiz quadrada de um número n é descobrir qual número elevado ao quadrado resulta em n, Inverso do Elevar
-
             PrimeiroTermo = n1;
             SegundoTermo = n2;
-            Resultado = n1;
             for (int i = 1; i < n2; i++)
             {
-                
+                Resultado = Math.Pow(n1, 1 / n2);
             }
             return Resultado;
         }
